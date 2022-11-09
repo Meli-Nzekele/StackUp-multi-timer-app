@@ -52,3 +52,32 @@ function newTimer(time) {
   });
   loadSite();
 }
+
+let timer_main = setInterval(function () {
+  for (let i = 0; i < time_list.length; i++) {
+    if (time_list[i].status == "running") {
+      time_list[i].time -= 1;
+    }
+    if (time_list[i].time == 0 && time_list[i].status == "running") {
+      time_list[i].status = "stop";
+      alert(`Timer ${i + 1} is done!`);
+    }
+
+    // document.getElementById(time_list[i].id).innerHTML = time_list[i].time;
+    // display time in mm:ss format
+    let minutes = Math.floor(time_list[i].time / 60);
+    let seconds = time_list[i].time % 60;
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    try {
+      document.getElementById(time_list[i].id).innerHTML =
+        minutes + ":" + seconds;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+}, 1000);
