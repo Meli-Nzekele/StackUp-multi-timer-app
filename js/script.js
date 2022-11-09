@@ -27,3 +27,28 @@ function loadSite() {
   }
   document.getElementById("timerContainer").innerHTML = text;
 }
+
+// add the functions to listen out for a click event on each button click
+
+function startButton(i) {
+  time_list[i].status = "running";
+}
+
+function pauseButton(i) {
+  time_list[i].status = "stop";
+}
+
+function stopButton(i) {
+  time_list[i].status = "stop";
+  time_list[i].time = time_list[i].original;
+}
+
+function newTimer(time) {
+  time_list.push({
+    id: "timer-" + (time_list.length + 1),
+    time: time,
+    status: "stop",
+    original: time,
+  });
+  loadSite();
+}
