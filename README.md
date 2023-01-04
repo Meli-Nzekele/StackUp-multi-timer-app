@@ -1,4 +1,4 @@
-<img src="https://stackupmvp.cdn.bubble.io/f1634672846390x472202890032379400/Logo.svg" title="SheCodes PRO" alt="SheCodes PRO" width="200" height="50"/>&nbsp;
+<img src="https://stackupmvp.cdn.bubble.io/f1634672846390x472202890032379400/Logo.svg" title="StackUp" alt="StackUp" width="200" height="50"/>&nbsp;
 
 # Multiple Timers Web App - StackUp
 
